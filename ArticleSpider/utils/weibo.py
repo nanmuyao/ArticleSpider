@@ -4,10 +4,6 @@ _date__ = '2017/11/1 22:45'
 
 # _*_ coding: utf-8 _*_
 
-"""
-python_weibo.py by xianhu
-"""
-
 import re
 import rsa
 import time
