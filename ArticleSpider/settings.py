@@ -56,8 +56,8 @@ SPIDER_MIDDLEWARES = {
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
-    # 'ArticleSpider.middlewares.RandomUserAgentMiddleware': 400,
-    'ArticleSpider.middlewares.JSPageMiddleware': 400,
+    'ArticleSpider.middlewares.RandomUserAgentMiddleware': 400,
+    # 'ArticleSpider.middlewares.JSPageMiddleware': 400,
     # 'ArticleSpider.middlewares.JSPageMiddleware': 400,
     # 'ArticleSpider.middlewares.RandomProxyMiddleware': 400,
 }

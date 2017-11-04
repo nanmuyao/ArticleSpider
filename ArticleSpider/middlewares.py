@@ -8,6 +8,8 @@
 from scrapy import signals
 from fake_useragent import UserAgent
 from .utils.crawl_xici_ip import GetIP
+from ArticleSpider.cookies import getCookie
+import json
 
 
 class ArticlespiderSpiderMiddleware(object):
@@ -82,6 +84,11 @@ class JSPageMiddleware(object):
     #通过chrome请求动态网页
     def process_request(self, request, spider):
         if spider.name == "weibo_nba":
+            #添加登录的cookie
+            # cookie = getCookie(1)
+            if spider.cookie:
+                request.cookies = spider.cookie
+
             spider.browser.get(request.url)
             import time
             time.sleep(3)
