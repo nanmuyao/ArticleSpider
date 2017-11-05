@@ -235,3 +235,8 @@ class HupuItem(scrapy.Item):
         params = (self["title"], self["content"], self["job_url"], self["company_name"], self["publish_time"], self["job_request"])
         return insert_sql, params
 
+
+# 链家item
+class LianJiaItem(scrapy.Item):
+    house_title = scrapy.Field()
+    house_unit_price = scrapy.Field()
